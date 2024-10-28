@@ -1,7 +1,7 @@
-const character = {name: 'мечник', health: 10, level: 2, attack: 80, defence: 40};
-let order = ['name', 'level'];
+export const character = {name: 'мечник', health: 10, level: 2, attack: 80, defence: 40};
+export let order = ['name', 'level'];
 
-function customSorting(obj, arr) {
+export function customSorting(obj, arr) {
     let objProps = [];
   
     Object.keys(obj).forEach((key) => {
