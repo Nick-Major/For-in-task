@@ -1,13 +1,11 @@
 import { character, order, customSorting } from "../src/index.js";
 
-test ('Valid arguments test', () => {
-    let arr = Array.isArray(order);
-    let isObj;
-    if(typeof character === 'object') {
-        isObj = true;
-        return isObj;
-    }
-    let result = [...arr, ...isObj];
-
-    expect(result).toEqual([true, true]);
+test ('sorting test', () => {
+    expect(customSorting(character, order)).toEqual([
+        { key: 'name', value: 'мечник' },
+        { key: 'level', value: 2 },
+        { key: 'attack', value: 80 },
+        { key: 'defence', value: 40 },
+        { key: 'health', value: 10 },
+    ]);
 })
